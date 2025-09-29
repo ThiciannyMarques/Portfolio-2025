@@ -1,8 +1,4 @@
-interface TeachingPageProps {
-  onPageChange: (page: string) => void
-}
-
-export function TeachingPage({ onPageChange }: TeachingPageProps) {
+export function TeachingPage() {
   return (
     <div className='pt-20'>
       <section className='py-20 bg-gradient-to-br from-green-50 to-blue-50 min-h-screen'>

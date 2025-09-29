@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react'
 
-interface SkillsPageProps {
-  onPageChange: (page: string) => void
-}
-
-export function SkillsPage({ onPageChange }: SkillsPageProps) {
+export function SkillsPage() {
   const [animateCards, setAnimateCards] = useState(false)
 
   useEffect(() => {

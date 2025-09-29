@@ -47,9 +47,9 @@ export default function App() {
       case 'projects':
         return <ProjectsPage />;
       case 'teaching':
-        return <TeachingPage onPageChange={handlePageChange} />;
+        return <TeachingPage />;
       case 'skills':
-        return <SkillsPage onPageChange={handlePageChange} />;
+        return <SkillsPage />;
 
       default:
         return <HomePage onPageChange={handlePageChange} />;
