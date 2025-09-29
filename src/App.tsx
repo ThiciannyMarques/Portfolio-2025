@@ -11,20 +11,17 @@ import { EasterEgg } from './components/EasterEgg';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Add Font Awesome
   useEffect(() => {
     const link = document.createElement('link');
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
 
-    // Add Google Fonts
     const fontLink = document.createElement('link');
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap';
     fontLink.rel = 'stylesheet';
     document.head.appendChild(fontLink);
 
-    // Set font family
     document.body.style.fontFamily = "'Poppins', sans-serif";
 
     return () => {
@@ -62,8 +59,7 @@ export default function App() {
       {renderCurrentPage()}
       <EasterEgg />
       
-      {/* Custom Styles */}
-      <style jsx global>{`
+      <style>{`
         .hero-bg {
           background: linear-gradient(135deg, #f093fb 0%, #f5576c 25%, #4facfe 50%, #00f2fe 75%, #43e97b 100%);
           background-size: 400% 400%;
