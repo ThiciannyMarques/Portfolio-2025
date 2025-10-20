@@ -5,27 +5,20 @@ import { AboutPage } from './components/AboutPage';
 import { ProjectsPage } from './components/ProjectsPage';
 import { TeachingPage } from './components/TeachingPage';
 import { SkillsPage } from './components/SkillsPage';
-
-import { EasterEgg } from './components/EasterEgg';
+import { Footer } from './components/Footer';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
-    const link = document.createElement('link');
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-
     const fontLink = document.createElement('link');
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap';
     fontLink.rel = 'stylesheet';
     document.head.appendChild(fontLink);
 
-    document.body.style.fontFamily = "'Poppins', sans-serif";
+    document.body.style.fontFamily = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
     return () => {
-      document.head.removeChild(link);
       document.head.removeChild(fontLink);
     };
   }, []);
@@ -40,13 +33,13 @@ export default function App() {
       case 'home':
         return <HomePage onPageChange={handlePageChange} />;
       case 'about':
-        return <AboutPage />;
+        return <AboutPage onPageChange={handlePageChange}/>;
       case 'projects':
-        return <ProjectsPage />;
+        return <ProjectsPage onPageChange={handlePageChange}/>;
       case 'teaching':
         return <TeachingPage />;
       case 'skills':
-        return <SkillsPage />;
+        return <SkillsPage onPageChange={handlePageChange} />;
 
       default:
         return <HomePage onPageChange={handlePageChange} />;
@@ -54,112 +47,122 @@ export default function App() {
   };
 
   return (
-    <div className="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <div className="bg-purple-900 text-gray-900 overflow-x-hidden">
       <Navigation currentPage={currentPage} onPageChange={handlePageChange} />
       {renderCurrentPage()}
-      <EasterEgg />
+      <Footer/>
       
-      <style>{`
-        .hero-bg {
-          background: linear-gradient(135deg, #f093fb 0%, #f5576c 25%, #4facfe 50%, #00f2fe 75%, #43e97b 100%);
-          background-size: 400% 400%;
-          animation: gradientShift 8s ease infinite;
+      <style >{`
+        /* Typography System - Modern & Professional */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-weight: 700;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
         }
         
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+        h1 {
+          font-size: clamp(2.5rem, 5vw, 4.5rem);
+          font-weight: 800;
         }
         
-        .floating {
-          animation: float 6s ease-in-out infinite;
+        h2 {
+          font-size: clamp(2rem, 4vw, 3.5rem);
+          font-weight: 700;
         }
         
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+        h3 {
+          font-size: clamp(1.5rem, 3vw, 2.25rem);
+          font-weight: 600;
         }
         
-        .pulse-glow {
-          animation: pulseGlow 2s infinite;
+        h4 {
+          font-size: clamp(1.25rem, 2vw, 1.75rem);
+          font-weight: 600;
         }
         
-        @keyframes pulseGlow {
-          0%, 100% { box-shadow: 0 0 20px rgba(67, 233, 123, 0.5); }
-          50% { box-shadow: 0 0 40px rgba(67, 233, 123, 0.8); }
+        p, body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-weight: 400;
+          line-height: 1.7;
+          letter-spacing: -0.01em;
         }
         
-        .perspective-1000 {
-          perspective: 1000px;
+        button, label, input, select, textarea {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
         
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
+        .font-heading {
+          font-family: 'Sora', sans-serif;
         }
         
-        .backface-hidden {
-          backface-visibility: hidden;
+        .font-body {
+          font-family: 'Inter', sans-serif;
         }
         
-        .rotate-y-180 {
-          transform: rotateY(180deg);
+        /* Smooth transitions */
+        * {
+          transition: color 0.2s ease, background-color 0.2s ease;
         }
         
-        .hover\\:rotate-y-180:hover {
-          transform: rotateY(180deg);
+        /* Professional gradient backgrounds */
+        .gradient-primary {
+          background: linear-gradient(135deg, #0A0E27 0%, #1E293B 50%, #334155 100%);
         }
         
-        .ripple {
-          position: relative;
-          overflow: hidden;
+        .gradient-accent {
+          background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
         }
         
-        .ripple::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.3);
-          transform: translate(-50%, -50%);
-          transition: width 0.6s, height 0.6s;
+        .gradient-gold {
+          background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
         }
         
-        .ripple:hover::before {
-          width: 300px;
-          height: 300px;
+        /* Text gradients */
+        .text-gradient {
+          background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 50%, #EC4899 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
-        .skill-icon:hover {
-          transform: scale(1.2) rotate(10deg);
-          filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        .text-gradient-gold {
+          background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #F97316 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
-        .card-flip-inner:hover {
-          transform: rotateY(180deg);
+        .text-gradient-blue {
+          background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #2563EB 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
-        .skill-bar {
-          animation: fillBar 2s ease-out;
+        /* Glassmorphism */
+        .glass {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        @keyframes fillBar {
-          from { transform: scaleX(0); }
-          to { transform: scaleX(1); }
+        .glass-dark {
+          background: rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
-        .skill-item:hover {
-          transform: translateX(4px);
-          transition: transform 0.2s ease;
+        /* Smooth scroll */
+        html {
+          scroll-behavior: smooth;
         }
         
+        /* Custom animations */
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
           }
           to {
             opacity: 1;
@@ -167,10 +170,10 @@ export default function App() {
           }
         }
         
-        @keyframes slideInLeft {
+        @keyframes fadeInLeft {
           from {
             opacity: 0;
-            transform: translateX(-30px);
+            transform: translateX(-40px);
           }
           to {
             opacity: 1;
@@ -178,51 +181,151 @@ export default function App() {
           }
         }
         
-        @keyframes bounceIn {
-          0% {
+        @keyframes fadeInRight {
+          from {
             opacity: 0;
-            transform: scale(0.3);
+            transform: translateX(40px);
           }
-          50% {
+          to {
             opacity: 1;
-            transform: scale(1.05);
+            transform: translateX(0);
           }
-          70% {
+        }
+        
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
             transform: scale(0.9);
           }
-          100% {
+          to {
             opacity: 1;
             transform: scale(1);
           }
         }
         
         .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out forwards;
+          animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        .animate-slideInLeft {
-          animation: slideInLeft 0.6s ease-out forwards;
+        .animate-fadeInLeft {
+          animation: fadeInLeft 0.8s ease-out forwards;
         }
         
-        .animate-bounceIn {
-          animation: bounceIn 0.8s ease-out forwards;
+        .animate-fadeInRight {
+          animation: fadeInRight 0.8s ease-out forwards;
         }
         
-        .tech-icon-glow:hover {
-          filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+        .animate-scaleIn {
+          animation: scaleIn 0.6s ease-out forwards;
         }
         
-        @keyframes pulse {
+        /* Hover effects */
+        .hover-lift {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hover-glow {
+          transition: all 0.3s ease;
+        }
+        
+        .hover-glow:hover {
+          box-shadow: 0 0 30px rgba(167, 139, 250, 0.4);
+        }
+        
+        .hover-scale {
+          transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+          transform: scale(1.05);
+        }
+        
+        /* Parallax */
+        .parallax {
+          transform: translateZ(0);
+          will-change: transform;
+        }
+        
+        /* Shimmer effect */
+        @keyframes shimmer {
+          0% {
+            background-position: -1000px 0;
+          }
+          100% {
+            background-position: 1000px 0;
+          }
+        }
+        
+        .shimmer {
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+          background-size: 1000px 100%;
+          animation: shimmer 3s infinite;
+        }
+        
+        /* Pulse glow */
+        @keyframes pulseGlow {
           0%, 100% {
-            opacity: 1;
+            box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
           }
           50% {
-            opacity: 0.5;
+            box-shadow: 0 0 40px rgba(167, 139, 250, 0.6);
           }
         }
         
-        .animate-pulse-slow {
-          animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .pulse-glow {
+          animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        /* Gradient animation */
+        @keyframes gradientShift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradientShift 8s ease infinite;
+        }
+        
+        /* Text gradient */
+        .text-gradient {
+          background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        
+        .text-gradient-gold {
+          background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        
+        /* Glassmorphism */
+        .glass {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Skill bar animation */
+        .skill-bar {
+          animation: fillBar 1.5s ease-out;
+        }
+        
+        @keyframes fillBar {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
         }
       `}</style>
     </div>

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
     "@radix-ui/react-aspect-ratio": "^1.1.2",
@@ -40,6 +41,7 @@
     "cmdk": "^1.1.1",
     "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.23.24",
     "lucide-react": "^0.487.0",
     "react": "^19.1.1",
     "react-day-picker": "^9.11.0",
