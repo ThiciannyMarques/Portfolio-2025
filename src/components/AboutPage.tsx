@@ -260,8 +260,8 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: 'spring', stiffness: 300 }}>
                 <ImageWithFallback
-                  src='/sobreHeroImg.png'
-                  alt='Thicianny Marques - Desenvolvedora Full Stack'
+                  src='/sobreHeroImg.jpeg'
+                  alt='Thicianny Marques - Desenvolvedora'
                   className='w-full h-auto object-cover'
                   width={600}
                   height={600}
