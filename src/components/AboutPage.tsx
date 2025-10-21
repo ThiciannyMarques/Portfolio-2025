@@ -249,8 +249,8 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}>
               <motion.div
-                className='absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-3xl opacity-30'
-                animate={{ scale: [1, 1.1, 1] }}
+                className='absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-3xl opacity-30 hidden sm:block'
+                animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 4, repeat: Infinity }}
                 aria-hidden='true'
               />
