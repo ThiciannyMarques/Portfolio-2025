@@ -187,17 +187,6 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}>
-              <motion.div
-                className='inline-block glass px-4 py-2 rounded-full'
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                role='status'
-                aria-label='Desenvolvedora'>
-                <span className='text-purple-300 font-semibold text-sm sm:text-base'>
-                  Desenvolvedora
-                </span>
-              </motion.div>
-
               <h1
                 id='hero-heading'
                 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight'>
@@ -205,14 +194,11 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               </h1>
 
               <p className='text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed'>
-                Sou a Thicianny Marques! Desenvolvedora apaixonada por criar
-                aplicações bonitas, intuitivas e que realmente façam sentido
-                para quem as usa. Desde 2019, quando comecei minha jornada na
-                Ciência da Computação, venho transformando ideias em
-                experiências digitais que unem criatividade, técnica e impacto
-                positivo. Adoro explorar novos desafios, aprender e usar a
-                tecnologia para criar soluções que inspirem e facilitem o dia a
-                dia.
+                Sou Thicianny Marques, desenvolvedora com experiência em criar
+                aplicações modernas, intuitivas e alinhadas a objetivos de
+                negócio. Desde 2019, transformo requisitos em soluções digitais
+                consistentes, com foco em qualidade de implementação e
+                experiência do usuário.
               </p>
 
               <div className='flex flex-wrap gap-3 sm:gap-4'>
@@ -580,8 +566,8 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               Pronta para <span className='text-gradient-gold'>Colaborar</span>
             </h2>
             <p className='text-base sm:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-10 px-4'>
-              Vamos transformar suas ideias em realidade digital? Entre em
-              contato e vamos criar algo extraordinário juntos.
+              Vamos transformar suas ideias em produto digital consistente e
+              confiável. Entre em contato para discutir requisitos.
             </p>
 
             <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center'>

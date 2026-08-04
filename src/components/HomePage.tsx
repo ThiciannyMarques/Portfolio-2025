@@ -25,7 +25,7 @@ import { useRef, useState, useCallback, lazy, Suspense } from 'react'
 import emailjs from 'emailjs-com'
 
 const LazyBackgroundElements = lazy(() =>
-  Promise.resolve({ default: BackgroundElements })
+  Promise.resolve({ default: BackgroundElements }),
 )
 
 interface HomePageProps {
@@ -50,7 +50,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
     if (!formRef.current) return
 
     const button = formRef.current.querySelector(
-      'button[type="submit"]'
+      'button[type="submit"]',
     ) as HTMLButtonElement
     const originalText = button.textContent
 
@@ -63,14 +63,14 @@ export function HomePage({ onPageChange }: HomePageProps) {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
-          button.textContent = 'Mensagem Enviada! ✓'
+          button.textContent = 'Mensagem enviada'
           button.className = button.className.replace(
             'from-purple-600 to-pink-600',
-            'from-green-500 to-green-600'
+            'from-green-500 to-green-600',
           )
 
           setTimeout(() => {
@@ -79,7 +79,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
             button.removeAttribute('aria-disabled')
             button.className = button.className.replace(
               'from-green-500 to-green-600',
-              'from-purple-600 to-pink-600'
+              'from-purple-600 to-pink-600',
             )
             formRef.current?.reset()
             setFormData({ name: '', email: '', message: '' })
@@ -89,7 +89,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
           button.textContent = 'Erro ao enviar'
           button.disabled = false
           button.removeAttribute('aria-disabled')
-        }
+        },
       )
   }, [])
 
@@ -181,25 +181,6 @@ export function HomePage({ onPageChange }: HomePageProps) {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}>
-              <motion.div
-                className='inline-flex items-center space-x-2 glass px-4 py-2 rounded-full border border-white/20'
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                role='status'
-                aria-label='Status: Desenvolvendo o Futuro Digital'>
-                <Sparkles
-                  className='w-4 h-4 text-yellow-400'
-                  aria-hidden='true'
-                />
-                <span className='text-sm font-semibold'>
-                  Desenvolvendo o Futuro Digital
-                </span>
-              </motion.div>
-
               <h1 id='hero-heading' className='sr-only'>
                 Thicianny Marques
               </h1>
@@ -221,12 +202,10 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}>
-                Desenvolvedora especializada em construir aplicações
-                web sofisticadas, elegantes e de alto impacto. Combinando{' '}
-                <span className='text-purple-400 font-semibold'>Vue.js</span>,
-                <span className='text-blue-400 font-semibold'> React</span> e
-                <span className='text-red-400 font-semibold'> Laravel</span>{' '}
-                para criar soluções que impressionam.
+                Desenvolvedora com experiência em aplicações web modernas,
+                orientação a objetivos de produto e entregas consistentes.
+                Utilizo React, Vue.js e Laravel para construir soluções técnicas
+                com foco em desempenho e qualidade de código.
               </motion.p>
 
               <motion.div
@@ -252,7 +231,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label='Entrar em contato'>
-                  Contratar Agora
+                  Entrar em contato
                   <Mail className='ml-2 w-5 h-5' aria-hidden='true' />
                 </motion.button>
               </motion.div>
@@ -370,10 +349,9 @@ export function HomePage({ onPageChange }: HomePageProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}>
-              Fora das telas, compartilho meus dias com meus cinco pets, sou
-              apaixonada por leitura, viagens e jogos. Quero ser lembrada não
-              apenas pelas soluções que construo, mas por tornar a tecnologia
-              mais humana e próxima de todas as pessoas.
+              Além do desenvolvimento, mantenho prática constante em boas
+              práticas de engenharia e usabilidade para garantir entregas
+              claras, testáveis e alinhadas com requisitos de negócio.
             </motion.p>
 
             <div className='flex justify-center flex-wrap gap-6 sm:gap-8 mb-8 lg:mb-10'>
@@ -685,10 +663,10 @@ export function HomePage({ onPageChange }: HomePageProps) {
             <h2
               id='contact-heading'
               className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6'>
-              Vamos construir algo bonito e útil juntos?
+              Vamos desenvolver uma solução prática e bem executada?
             </h2>
             <p className='text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto'>
-              Acredito que tecnologia deve ser inclusiva, escalável e humana.
+              Acredito em tecnologia inclusiva, escalável e centrada no usuário.
             </p>
           </motion.div>
 
@@ -884,7 +862,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   </span>
                 </div>
                 <p className='text-xs sm:text-sm opacity-90 mb-6'>
-                  Estou aceitando projetos. Vamos conversar sobre sua ideia!
+                  Estou aceitando novos projetos. Entre em contato para alinhar
+                  expectativas e próximos passos.
                 </p>
                 <div className='text-xs sm:text-sm opacity-80 space-y-2'>
                   <div className='flex items-center space-x-2'>

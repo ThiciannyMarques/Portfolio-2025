@@ -23,7 +23,7 @@ export function TeachingPage() {
       { value: 'Educação', icon: BookOpen },
       { value: 'Transformação', icon: TrendingUp },
     ],
-    []
+    [],
   )
 
   const programsData = useMemo(
@@ -67,7 +67,7 @@ export function TeachingPage() {
         gradient: 'from-green-600 to-teal-600',
       },
     ],
-    []
+    [],
   )
 
   const methodologyData = useMemo(
@@ -101,11 +101,11 @@ export function TeachingPage() {
         gradient: 'from-green-600 to-teal-600',
       },
     ],
-    []
+    [],
   )
 
-const getAnimationProps = (baseProps: MotionProps): MotionProps =>
-  isReducedMotion ? { ...baseProps, transition: { duration: 0 } } : baseProps
+  const getAnimationProps = (baseProps: MotionProps): MotionProps =>
+    isReducedMotion ? { ...baseProps, transition: { duration: 0 } } : baseProps
 
   return (
     <div
@@ -125,18 +125,6 @@ const getAnimationProps = (baseProps: MotionProps): MotionProps =>
                 animate: { opacity: 1, x: 0 },
                 transition: { duration: 0.8 },
               })}>
-              <motion.div
-                className='inline-block glass px-4 py-2 rounded-full'
-                {...getAnimationProps({
-                  animate: { scale: [1, 1.05, 1] },
-                  transition: { duration: 2, repeat: Infinity },
-                })}
-                aria-label='Ensino & Impacto Social'>
-                <span className='text-purple-300 font-semibold text-sm md:text-base'>
-                  Ensino & Impacto Social
-                </span>
-              </motion.div>
-
               <h1
                 id='teaching-hero-title'
                 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
@@ -344,7 +332,7 @@ const getAnimationProps = (baseProps: MotionProps): MotionProps =>
                         <div
                           className='w-5 h-5 md:w-6 md:h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs flex-shrink-0 mt-0.5'
                           aria-hidden='true'>
-                          ✓
+                          <span className='text-xs'>•</span>
                         </div>
                         <span className='text-gray-300 text-sm md:text-base'>
                           {topic}

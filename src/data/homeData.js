@@ -1,8 +1,7 @@
 export const heroData = {
   name: 'Thicianny Marques',
   role: 'Frontend | Fullstack | Vue.js | React | UI/UX',
-  tagline: '"Dev com alma criativa e olhar estético"',
-  emoji: '👩‍💻',
+  tagline: '"Desenvolvedora orientada a resultados e qualidade técnica"',
   buttons: {
     projects: 'Conheça meus projetos',
     contact: 'Entre em contato'
@@ -18,23 +17,20 @@ export const technologies = [
 
 export const projects = [
   {
-    icon: '🎨',
     title: 'Design System',
-    description: 'Biblioteca de componentes com Storybook + Tailwind',
+    description: 'Biblioteca de componentes com Storybook e Tailwind.',
     tags: ['Vue', 'Storybook', 'Tailwind'],
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    icon: '🚀',
     title: 'App Real-time',
-    description: 'Aplicação com GraphQL e WebSockets',
+    description: 'Aplicação com GraphQL e WebSockets.',
     tags: ['React', 'GraphQL', 'WebSocket'],
     gradient: 'from-blue-500 to-teal-500',
   },
   {
-    icon: '💚',
     title: 'Projeto Social',
-    description: 'Plataforma educativa para impacto social',
+    description: 'Plataforma educativa para impacto social.',
     tags: ['Vue', 'Laravel', 'MySQL'],
     gradient: 'from-green-500 to-teal-500',
   },
@@ -42,34 +38,29 @@ export const projects = [
 
 export const aboutData = {
   title: 'Um pouco sobre mim',
-  description: `Nascida em Belém, criada em São Luís, apaixonada por tecnologia e
-cultura asiática. Quando não estou codando, você me encontra
-assistindo Studio Ghibli com meus pets 🐱, explorando o universo
-de Senhor dos Anéis 🧙‍♀️, ou planejando a próxima aventura educativa.`,
+  description: `Nascida em Belém e criada em São Luís, sou desenvolvedora com foco em tecnologia aplicada a produtos digitais. Minha atuação combina front-end, back-end e entrega de soluções com alto padrão técnico.`,
   items: [
-    { icon: '🐱', label: 'Pet Lover' },
-    { icon: '🎌', label: 'Cultura Asiática' },
-    { icon: '🌟', label: 'Studio Ghibli' },
-    { icon: '🧙‍♀️', label: 'LOTR Fan' },
+    { icon: '', label: 'Tecnologia' },
+    { icon: '', label: 'Acessibilidade' },
+    { icon: '', label: 'Performance' },
+    { icon: '', label: 'Resultados' },
   ],
   button: 'Conheça minha história'
 }
 
 export const teachingData = [
   {
-    emoji: '👩‍🏫',
     title: 'Manas Digital',
     description:
       'Projeto dedicado ao ensino de tecnologia para mulheres, promovendo inclusão e diversidade no mundo tech através de workshops e mentorias.',
-    highlight: 'Empoderando mulheres na tech',
+    highlight: 'Empoderando mulheres na tecnologia',
     color: 'purple'
   },
   {
-    emoji: '🎨',
     title: 'MangaLab',
     description:
       'Laboratório criativo que une jovens, criatividade e tecnologia, explorando narrativas visuais e desenvolvimento de projetos inovadores.',
-    highlight: 'Criatividade + Tecnologia',
+    highlight: 'Criatividade e tecnologia para aprendizado',
     color: 'blue'
   },
 ]
@@ -77,7 +68,7 @@ export const teachingData = [
 export const contactData = {
   title: 'Vamos Conversar?',
   description:
-    'Estou sempre aberta para novos projetos, colaborações e oportunidades de criar algo incrível juntos!',
+    'Estou disponível para projetos, colaborações e oportunidades de consultoria técnica com foco em desenvolvimento e entrega de valor.',
   form: {
     nameLabel: 'Nome',
     emailLabel: 'Email',
@@ -96,18 +87,16 @@ export const contactData = {
   social: [
     { icon: 'fab fa-linkedin', name: 'LinkedIn', description: 'Vamos nos conectar profissionalmente', color: 'bg-blue-600' },
     { icon: 'fab fa-github', name: 'GitHub', description: 'Confira meus projetos e contribuições', color: 'bg-gray-800' },
-    { icon: 'fab fa-instagram', name: 'Instagram', description: 'Um pouco do meu dia a dia', color: 'bg-pink-500' },
-    { icon: 'fab fa-twitter', name: 'Twitter', description: 'Pensamentos sobre tech e vida', color: 'bg-blue-400' },
+    { icon: 'fab fa-instagram', name: 'Instagram', description: 'Conteúdo profissional e portfólio visual', color: 'bg-pink-500' },
+    { icon: 'fab fa-twitter', name: 'Twitter', description: 'Compartilhamento técnico e carreira', color: 'bg-blue-400' },
   ],
   locations: [
     {
-      icon: '📍',
       title: 'São Luís, Maranhão',
       description: 'Disponível para projetos remotos',
       color: 'bg-green-500'
     },
     {
-      icon: '🌍',
       title: 'Trabalho Remoto',
       description: 'Colaboro com equipes do mundo todo',
       color: 'bg-blue-500'
@@ -116,13 +105,13 @@ export const contactData = {
   status: {
     title: 'Status Atual',
     text: 'Disponível para novos projetos',
-    note: 'Estou aceitando projetos para início em janeiro de 2024. Vamos conversar sobre sua ideia!',
-    details: ['⏰ Respondo em até 24h', '💬 Primeira consulta gratuita', '🚀 Projetos a partir de 2 semanas']
+    note: 'Disponível para início em janeiro de 2024. Vamos conversar sobre sua ideia.',
+    details: ['Respondo em até 24h', 'Primeira consulta gratuita', 'Projetos a partir de 2 semanas']
   },
   final: {
     title: 'Pronta para transformar sua ideia em realidade?',
     description:
-      'Seja um projeto pessoal, startup ou empresa estabelecida, vamos criar algo incrível juntos!',
+      'Seja um projeto pessoal, startup ou empresa estabelecida, vamos desenvolver uma solução eficiente e alinhada ao seu objetivo.',
     buttons: {
       start: 'Vamos começar!',
       work: 'Ver meu trabalho'

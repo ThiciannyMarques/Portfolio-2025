@@ -43,7 +43,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       { icon: TrendingUp, value: '95%', label: 'Proficiência' },
       { icon: Star, value: '150+', label: 'Projetos' },
     ],
-    []
+    [],
   )
 
   const techIcons = useMemo(
@@ -54,7 +54,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       { icon: 'fab fa-node-js', name: 'Node.js', color: 'bg-green-600' },
       { icon: 'fab fa-js-square', name: 'JavaScript', color: 'bg-blue-600' },
     ],
-    []
+    [],
   )
 
   const skillsCategories = useMemo(
@@ -241,7 +241,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
         ],
       },
     ],
-    []
+    [],
   )
 
   const learningData = useMemo(
@@ -271,11 +271,11 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
         gradient: 'from-purple-500 to-pink-500',
       },
     ],
-    []
+    [],
   )
 
-const getAnimationProps = (baseProps: MotionProps): MotionProps =>
-  isReducedMotion ? { ...baseProps, transition: { duration: 0 } } : baseProps
+  const getAnimationProps = (baseProps: MotionProps): MotionProps =>
+    isReducedMotion ? { ...baseProps, transition: { duration: 0 } } : baseProps
 
   return (
     <div
@@ -295,18 +295,6 @@ const getAnimationProps = (baseProps: MotionProps): MotionProps =>
               animate: { opacity: 1, y: 0 },
               transition: { duration: 0.8 },
             })}>
-            <motion.div
-              className='inline-block glass px-4 py-2 rounded-full mb-6'
-              {...getAnimationProps({
-                animate: { scale: [1, 1.05, 1] },
-                transition: { duration: 2, repeat: Infinity },
-              })}
-              aria-label='Stack Tecnológico'>
-              <span className='text-purple-300 font-semibold text-sm md:text-base'>
-                Stack Tecnológico
-              </span>
-            </motion.div>
-
             <h1
               id='hero-title'
               className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6'>
@@ -316,7 +304,8 @@ const getAnimationProps = (baseProps: MotionProps): MotionProps =>
 
             <p className='text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-8 md:mb-12 max-w-3xl mx-auto'>
               Um mapa das tecnologias que domino e das ferramentas que uso para
-              criar experiências incríveis
+              criar aplicações com qualidade técnica, desempenho e
+              previsibilidade.
             </p>
 
             <div
@@ -703,8 +692,8 @@ const getAnimationProps = (baseProps: MotionProps): MotionProps =>
               Pronto para <span className='text-gradient-gold'>Colaborar</span>?
             </h2>
             <p className='text-lg md:text-xl text-gray-300 mb-8 md:mb-10 max-w-2xl mx-auto'>
-              Trago todo esse conhecimento e experiência para o seu projeto.
-              Vamos criar algo incrível juntos?
+              Levo conhecimento técnico e experiência prática para o seu
+              projeto. Vamos alinhar a solução com os seus objetivos.
             </p>
 
             <div

@@ -52,7 +52,7 @@ export const ProjectsPage = memo(function ProjectsPage({
         : filteredProjects.slice(0, 6)
       if (projectsToScroll.length > 0) {
         const lastProjectElement = document.getElementById(
-          `project-${projectsToScroll[projectsToScroll.length - 1].id}`
+          `project-${projectsToScroll[projectsToScroll.length - 1].id}`,
         )
         lastProjectElement?.scrollIntoView({
           behavior: 'smooth',
@@ -116,17 +116,6 @@ export const ProjectsPage = memo(function ProjectsPage({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}>
-            <motion.div
-              className='inline-block glass px-4 py-2 rounded-full mb-4 sm:mb-6'
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              role='status'
-              aria-label='Portfólio de projetos'>
-              <span className='text-purple-300 font-semibold text-sm sm:text-base'>
-                Portfólio de Projetos
-              </span>
-            </motion.div>
-
             <h1
               id='projects-hero-title'
               className='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight'>
@@ -135,8 +124,9 @@ export const ProjectsPage = memo(function ProjectsPage({
             </h1>
 
             <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-8 sm:mb-12 px-4'>
-              Mais de 150 projetos desenvolvidos, cada um com sua história única
-              de inovação, desafios superados e resultados excepcionais.
+              Mais de 150 projetos desenvolvidos com foco em soluções de
+              impacto, usabilidade e performance para clientes de diferentes
+              setores.
             </p>
 
             <motion.div
