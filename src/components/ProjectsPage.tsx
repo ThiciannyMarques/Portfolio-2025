@@ -1,15 +1,16 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import {
+  Award01Icon,
+  Layout01Icon,
+  LinkSquare01Icon,
+  UniversalAccessIcon,
+  UserGroupIcon,
+  CodeIcon,
+  AnalyticsUpIcon,
+  FlashIcon,
+} from '@hugeicons/core-free-icons'
 import { motion } from 'framer-motion'
 import { BackgroundElements } from './BackgroundElements'
-import {
-  ExternalLink,
-  Award,
-  Users,
-  Code2,
-  BarChart2,
-  Accessibility,
-  Layout,
-  Zap,
-} from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { useState, useRef, useCallback, memo } from 'react'
 import { projects } from '../data/projectData.ts'
@@ -112,7 +113,7 @@ export const ProjectsPage = memo(function ProjectsPage({
 
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 relative z-10'>
           <motion.div
-            className='max-w-4xl mx-auto text-center text-white'
+            className=' mx-auto text-center text-white'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}>
@@ -136,19 +137,19 @@ export const ProjectsPage = memo(function ProjectsPage({
               animate='visible'>
               {[
                 {
-                  icon: Code2,
+                  icon: CodeIcon,
                   value: '80+',
                   label: 'Projetos',
                   ariaLabel: 'Mais de 80 projetos desenvolvidos',
                 },
                 {
-                  icon: Users,
+                  icon: UserGroupIcon,
                   value: '50K+',
                   label: 'Usuários',
                   ariaLabel: 'Mais de 50 mil usuários atendidos',
                 },
                 {
-                  icon: Award,
+                  icon: Award01Icon,
                   value: '95%',
                   label: 'Satisfação',
                   ariaLabel: '95 porcento de satisfação do cliente',
@@ -162,7 +163,8 @@ export const ProjectsPage = memo(function ProjectsPage({
                   whileTap={{ scale: 0.95 }}
                   role='article'
                   aria-label={stat.ariaLabel}>
-                  <stat.icon
+                  <HugeiconsIcon
+                    icon={stat.icon}
                     className='w-6 h-6 sm:w-8 sm:h-8 text-purple-400 mx-auto mb-2'
                     aria-hidden='true'
                   />
@@ -257,7 +259,8 @@ export const ProjectsPage = memo(function ProjectsPage({
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         aria-label={`Visitar projeto ${project.title} (abre em nova aba)`}>
-                        <ExternalLink
+                        <HugeiconsIcon
+                          icon={LinkSquare01Icon}
                           className='w-4 h-4 sm:w-5 sm:h-5 text-white'
                           aria-hidden='true'
                         />
@@ -364,10 +367,10 @@ export const ProjectsPage = memo(function ProjectsPage({
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8'>
             {[
               {
-                icon: BarChart2,
+                icon: AnalyticsUpIcon,
                 title: 'Monitoramento',
                 description:
                   'Implementação de analytics, métricas de performance e sistemas de logging para garantir qualidade e confiabilidade.',
@@ -375,7 +378,7 @@ export const ProjectsPage = memo(function ProjectsPage({
                 ariaLabel: 'Monitoramento e métricas de performance',
               },
               {
-                icon: Accessibility,
+                icon: UniversalAccessIcon,
                 title: 'Acessibilidade',
                 description:
                   'Desenvolvimento inclusivo seguindo padrões WCAG, garantindo que todos possam usar as aplicações independente de suas limitações.',
@@ -383,7 +386,7 @@ export const ProjectsPage = memo(function ProjectsPage({
                 ariaLabel: 'Acessibilidade e desenvolvimento inclusivo',
               },
               {
-                icon: Layout,
+                icon: Layout01Icon,
                 title: 'UX Design',
                 description:
                   'Foco na experiência do usuário, prototipagem, testes de usabilidade e design thinking aplicado ao desenvolvimento.',
@@ -391,7 +394,7 @@ export const ProjectsPage = memo(function ProjectsPage({
                 ariaLabel: 'UX Design e experiência do usuário',
               },
               {
-                icon: Zap,
+                icon: FlashIcon,
                 title: 'Performance & Escalabilidade',
                 description:
                   'Construção de sistemas rápidos, robustos e preparados para crescer conforme a demanda.',
@@ -401,7 +404,7 @@ export const ProjectsPage = memo(function ProjectsPage({
             ].map((item, index) => (
               <motion.article
                 key={index}
-                className='glass-dark rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/30 hover-glow transition-all duration-300 focus-within:ring-2 focus-within:ring-purple-400 focus-within:ring-offset-2 focus-within:ring-offset-gray-900'
+                className='glass-dark rounded-2xl p-2 sm:p-6 border border-white/10 hover:border-white/30 hover-glow transition-all duration-300 flex flex-col min-w-0 focus-within:ring-2 focus-within:ring-purple-400 focus-within:ring-offset-2 focus-within:ring-offset-gray-900'
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -411,18 +414,19 @@ export const ProjectsPage = memo(function ProjectsPage({
                 aria-label={item.ariaLabel}
                 tabIndex={0}>
                 <motion.div
-                  className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center mb-4 sm:mb-6`}
+                  className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center mb-4 sm:mb-6 flex-shrink-0`}
                   whileHover={{ scale: 1.1 }}>
-                  <item.icon
+                  <HugeiconsIcon
+                    icon={item.icon}
                     className='w-6 h-6 sm:w-8 sm:h-8 text-white'
                     aria-hidden='true'
                   />
                 </motion.div>
 
-                <h3 className='text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3'>
+                <h4 className='text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 break-words'>
                   {item.title}
-                </h3>
-                <p className='text-gray-400 text-sm sm:text-base leading-relaxed'>
+                </h4>
+                <p className='text-gray-400 text-sm sm:text-base leading-relaxed break-words'>
                   {item.description}
                 </p>
               </motion.article>
@@ -438,7 +442,7 @@ export const ProjectsPage = memo(function ProjectsPage({
 
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <motion.div
-            className='max-w-4xl mx-auto text-center'
+            className=' mx-auto text-center'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

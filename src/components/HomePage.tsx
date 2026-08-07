@@ -1,22 +1,23 @@
+import { HugeiconsIcon } from '@hugeicons/react'
 import {
-  ArrowRight,
-  Code2,
-  Palette,
-  Rocket,
-  Users,
-  Sparkles,
-  Mail,
-  Github,
-  Linkedin,
-  MapPin,
-  Clock,
-  Send,
-  Lightbulb,
-  BookOpen,
-  Plane,
-  Gamepad2,
-  PawPrint,
-} from 'lucide-react'
+  Airplane01Icon,
+  ArrowRight01Icon,
+  BookOpen01Icon,
+  BulbIcon,
+  Clock01Icon,
+  CodeIcon,
+  ColorPickerIcon,
+  GameController02Icon,
+  GithubIcon,
+  Linkedin01Icon,
+  Location01Icon,
+  Mail01Icon,
+  RocketIcon,
+  SentIcon,
+  SparklesIcon,
+  UserGroupIcon,
+  CatIcon,
+} from '@hugeicons/core-free-icons'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { BackgroundElements } from './BackgroundElements'
@@ -105,22 +106,22 @@ export function HomePage({ onPageChange }: HomePageProps) {
   ]
 
   const hobbies = [
-    { icon: PawPrint, label: 'Pets' },
-    { icon: BookOpen, label: 'Leitura' },
-    { icon: Plane, label: 'Viagens' },
-    { icon: Gamepad2, label: 'Jogos' },
+    { icon: CatIcon, label: 'Pets' },
+    { icon: BookOpen01Icon, label: 'Leitura' },
+    { icon: Airplane01Icon, label: 'Viagens' },
+    { icon: GameController02Icon, label: 'Jogos' },
   ]
 
   const socialLinks = [
     {
-      icon: Linkedin,
+      icon: Linkedin01Icon,
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/thicianny-marques',
       description: 'Vamos nos conectar profissionalmente',
       color: 'from-blue-600 to-blue-700',
     },
     {
-      icon: Github,
+      icon: GithubIcon,
       name: 'GitHub',
       link: 'https://github.com/ThiciannyMarques',
       description: 'Confira meus projetos e contribuições',
@@ -131,7 +132,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
   const skills = [
     {
       category: 'Frontend',
-      icon: Palette,
+      icon: ColorPickerIcon,
       technologies: [
         'Vue.js',
         'React',
@@ -144,7 +145,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
     },
     {
       category: 'Backend',
-      icon: Code2,
+      icon: CodeIcon,
       technologies: [
         'Laravel',
         'Node.js',
@@ -157,7 +158,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
     },
     {
       category: 'DevOps & Tools',
-      icon: Rocket,
+      icon: RocketIcon,
       technologies: ['Git', 'Docker', 'CI/CD', 'AWS', 'Vercel', 'Linux'],
       gradient: 'from-orange-600 to-red-600',
     },
@@ -220,7 +221,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   whileTap={{ scale: 0.95 }}
                   aria-label='Ver projetos realizados'>
                   Ver Projetos
-                  <ArrowRight
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
                     className='ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform'
                     aria-hidden='true'
                   />
@@ -232,7 +234,11 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   whileTap={{ scale: 0.95 }}
                   aria-label='Entrar em contato'>
                   Entrar em contato
-                  <Mail className='ml-2 w-5 h-5' aria-hidden='true' />
+                  <HugeiconsIcon
+                    icon={Mail01Icon}
+                    className='ml-2 w-5 h-5'
+                    aria-hidden='true'
+                  />
                 </motion.button>
               </motion.div>
 
@@ -355,7 +361,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <div className='w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-2 sm:mb-3'>
-                    <item.icon
+                    <HugeiconsIcon
+                      icon={item.icon}
                       className='w-6 h-6 sm:w-7 sm:h-7 text-white'
                       aria-hidden='true'
                     />
@@ -374,7 +381,11 @@ export function HomePage({ onPageChange }: HomePageProps) {
               whileTap={{ scale: 0.95 }}
               aria-label='Conhecer mais sobre minha história'>
               <span>Conheça minha história</span>
-              <ArrowRight className='w-5 h-5 ml-2' aria-hidden='true' />
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                className='w-5 h-5 ml-2'
+                aria-hidden='true'
+              />
             </motion.button>
           </div>
         </div>
@@ -410,7 +421,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
               transition={{ duration: 0.8 }}
               aria-label='Ver todos os projetos'>
               <span>Ver todos</span>
-              <ArrowRight
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
                 className='w-5 h-5 group-hover:translate-x-2 transition-transform'
                 aria-hidden='true'
               />
@@ -494,7 +506,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
           <div className='grid md:grid-cols-2 gap-8 lg:gap-12'>
             {[
               {
-                icon: Users,
+                icon: UserGroupIcon,
                 title: 'Manas Digitais',
                 description:
                   'Iniciativa que leva tecnologia e oportunidades para mulheres em situação de vulnerabilidade.',
@@ -502,7 +514,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 highlight: 'Inspirando e empoderando mulheres na tech',
               },
               {
-                icon: Lightbulb,
+                icon: BulbIcon,
                 title: 'MangaLab',
                 description:
                   'Projeto educativo para jovens, conectando criatividade, tecnologia e inovação.',
@@ -520,7 +532,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 whileHover={{ y: -10, scale: 1.03 }}>
                 <div
                   className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center mb-4 sm:mb-6 transform transition-transform duration-500`}>
-                  <item.icon
+                  <HugeiconsIcon
+                    icon={item.icon}
                     className='w-7 h-7 sm:w-8 sm:h-8 text-white'
                     aria-hidden='true'
                   />
@@ -534,7 +547,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 </p>
 
                 <div className='text-white font-semibold flex items-center space-x-2 text-sm sm:text-base'>
-                  <Sparkles
+                  <HugeiconsIcon
+                    icon={SparklesIcon}
                     className='w-4 h-4 sm:w-5 sm:h-5 text-yellow-400'
                     aria-hidden='true'
                   />
@@ -592,7 +606,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${skill.gradient} rounded-xl flex items-center justify-center mb-4 sm:mb-6`}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}>
-                  <skill.icon
+                  <HugeiconsIcon
+                    icon={skill.icon}
                     className='w-7 h-7 sm:w-8 sm:h-8 text-white'
                     aria-hidden='true'
                   />
@@ -632,7 +647,11 @@ export function HomePage({ onPageChange }: HomePageProps) {
               whileTap={{ scale: 0.95 }}
               aria-label='Ver todas as habilidades técnicas'>
               <span>Ver Stack Completo</span>
-              <ArrowRight className='w-5 h-5' aria-hidden='true' />
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                className='w-5 h-5'
+                aria-hidden='true'
+              />
             </motion.button>
           </motion.div>
         </div>
@@ -759,7 +778,11 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   whileTap={{ scale: 0.98 }}
                   aria-label='Enviar mensagem'>
                   <span>Enviar Mensagem</span>
-                  <Send className='w-4 h-4 sm:w-5 sm:h-5' aria-hidden='true' />
+                  <HugeiconsIcon
+                    icon={SentIcon}
+                    className='w-4 h-4 sm:w-5 sm:h-5'
+                    aria-hidden='true'
+                  />
                 </motion.button>
               </form>
             </motion.div>
@@ -786,7 +809,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                       aria-label={`Visitar ${social.name}`}>
                       <div
                         className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${social.color} rounded-full flex items-center justify-center text-white flex-shrink-0`}>
-                        <social.icon
+                        <HugeiconsIcon
+                          icon={social.icon}
                           className='w-5 h-5 sm:w-6 sm:h-6'
                           aria-hidden='true'
                         />
@@ -815,7 +839,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 </h4>
                 <div className='flex items-center space-x-3 sm:space-x-4'>
                   <div className='w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white flex-shrink-0'>
-                    <MapPin
+                    <HugeiconsIcon
+                      icon={Location01Icon}
                       className='w-5 h-5 sm:w-6 sm:h-6'
                       aria-hidden='true'
                     />
@@ -858,15 +883,27 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 </p>
                 <div className='text-xs sm:text-sm opacity-80 space-y-2'>
                   <div className='flex items-center space-x-2'>
-                    <Clock className='w-4 h-4' aria-hidden='true' />
+                    <HugeiconsIcon
+                      icon={Clock01Icon}
+                      className='w-4 h-4'
+                      aria-hidden='true'
+                    />
                     <span>Respondo em até 24h</span>
                   </div>
                   <div className='flex items-center space-x-2'>
-                    <Users className='w-4 h-4' aria-hidden='true' />
+                    <HugeiconsIcon
+                      icon={UserGroupIcon}
+                      className='w-4 h-4'
+                      aria-hidden='true'
+                    />
                     <span>Primeira consulta gratuita</span>
                   </div>
                   <div className='flex items-center space-x-2'>
-                    <Rocket className='w-4 h-4' aria-hidden='true' />
+                    <HugeiconsIcon
+                      icon={RocketIcon}
+                      className='w-4 h-4'
+                      aria-hidden='true'
+                    />
                     <span>Projetos a partir de 2 semanas</span>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Cancel01Icon, Menu01Icon } from "@hugeicons/core-free-icons";
 import { useState, useCallback, memo } from 'react'
-import { Menu, X } from 'lucide-react'
 
 interface NavigationProps {
   currentPage: string
@@ -131,9 +132,9 @@ export const Navigation = memo(function Navigation({
             aria-haspopup='true'
             type='button'>
             {isMobileMenuOpen ? (
-              <X className='w-6 h-6 text-white' aria-hidden='true' />
+              <HugeiconsIcon icon={Cancel01Icon} className='w-6 h-6 text-white' aria-hidden='true' />
             ) : (
-              <Menu className='w-6 h-6 text-white' aria-hidden='true' />
+              <HugeiconsIcon icon={Menu01Icon} className='w-6 h-6 text-white' aria-hidden='true' />
             )}
           </button>
         </div>

@@ -1,16 +1,18 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import {
+  AnalyticsUpIcon,
+  Award04Icon,
+  CheckmarkCircle01Icon,
+  CloudIcon,
+  AiProgrammingIcon,
+  DatabaseIcon,
+  CodeFolderIcon,
+  CodeIcon,
+  ComputerProgramming02Icon,
+  DiplomaIcon,
+} from '@hugeicons/core-free-icons'
 import { motion, type MotionProps } from 'framer-motion'
 import { BackgroundElements } from './BackgroundElements'
-import {
-  Code2,
-  Palette,
-  Database,
-  Cloud,
-  Zap,
-  Award,
-  TrendingUp,
-  CheckCircle,
-  Star,
-} from 'lucide-react'
 import { useEffect, useState, useMemo } from 'react'
 
 interface SkillsPageProps {
@@ -38,10 +40,10 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
 
   const statsData = useMemo(
     () => [
-      { icon: Code2, value: '20+', label: 'Tecnologias' },
-      { icon: Award, value: '5+', label: 'Anos' },
-      { icon: TrendingUp, value: '95%', label: 'Proficiência' },
-      { icon: Star, value: '150+', label: 'Projetos' },
+      { icon: CodeIcon, value: '20+', label: 'Tecnologias' },
+      { icon: Award04Icon, value: '5+', label: 'Anos' },
+      { icon: AnalyticsUpIcon, value: '95%', label: 'Proficiência' },
+      { icon: CodeFolderIcon, value: '150+', label: 'Projetos' },
     ],
     [],
   )
@@ -61,7 +63,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
     () => [
       {
         category: 'Linguagens',
-        icon: Palette,
+        icon: AiProgrammingIcon,
         gradient: 'from-red-600 to-red-500',
         skills: [
           {
@@ -82,7 +84,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Frontend',
-        icon: Palette,
+        icon: AiProgrammingIcon,
         gradient: 'from-blue-600 to-blue-500',
         skills: [
           {
@@ -107,7 +109,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Backend',
-        icon: Database,
+        icon: DatabaseIcon,
         gradient: 'from-green-600 to-green-500',
         skills: [
           { name: 'Node.js', level: 88, color: 'from-green-600 to-lime-600' },
@@ -128,7 +130,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Database',
-        icon: Database,
+        icon: DatabaseIcon,
         gradient: 'from-purple-600 to-purple-500',
         skills: [
           { name: 'MySQL', level: 85, color: 'from-blue-500 to-cyan-500' },
@@ -149,7 +151,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'UI/UX',
-        icon: Palette,
+        icon: AiProgrammingIcon,
         gradient: 'from-pink-600 to-pink-500',
         skills: [
           { name: 'Figma', level: 90, color: 'from-purple-500 to-pink-500' },
@@ -174,7 +176,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'DevOps',
-        icon: Cloud,
+        icon: CloudIcon,
         gradient: 'from-orange-600 to-orange-500',
         skills: [
           { name: 'Git/GitHub', level: 95, color: 'from-gray-700 to-gray-900' },
@@ -191,7 +193,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Testing',
-        icon: Zap,
+        icon: ComputerProgramming02Icon,
         gradient: 'from-teal-600 to-teal-500',
         skills: [
           { name: 'Jest', level: 80, color: 'from-blue-500 to-indigo-500' },
@@ -212,7 +214,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Frameworks & CMS',
-        icon: Palette,
+        icon: AiProgrammingIcon,
         gradient: 'from-gray-600 to-gray-500',
         skills: [
           { name: 'Nuxt.js', level: 85, color: 'from-green-500 to-teal-500' },
@@ -225,7 +227,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         category: 'Outras Skills',
-        icon: Zap,
+        icon: ComputerProgramming02Icon,
         gradient: 'from-indigo-600 to-indigo-500',
         skills: [
           { name: 'Webpack', level: 80, color: 'from-gray-500 to-gray-700' },
@@ -248,7 +250,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
     () => [
       {
         title: 'Certificações',
-        icon: Award,
+        icon: DiplomaIcon,
         items: [
           'Vue.js Advanced Certification',
           'React Developer Professional',
@@ -260,7 +262,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
       },
       {
         title: 'Aprendendo Atualmente',
-        icon: TrendingUp,
+        icon: AnalyticsUpIcon,
         items: [
           'AI & Machine Learning Integration',
           'Web3 & Blockchain Development',
@@ -289,7 +291,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
 
         <div className='container mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-20 relative z-10'>
           <motion.div
-            className='max-w-4xl mx-auto text-center text-white'
+            className=' mx-auto text-center text-white'
             {...getAnimationProps({
               initial: { opacity: 0, y: 30 },
               animate: { opacity: 1, y: 0 },
@@ -324,7 +326,8 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
                   whileHover={!isReducedMotion ? { scale: 1.05, y: -5 } : {}}
                   role='gridcell'
                   tabIndex={0}>
-                  <stat.icon
+                  <HugeiconsIcon
+                    icon={stat.icon}
                     className='w-6 h-6 md:w-8 md:h-8 text-purple-400 mx-auto mb-2'
                     aria-hidden='true'
                   />
@@ -390,7 +393,8 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
                     {...getAnimationProps({
                       transition: { duration: 0.6 },
                     })}>
-                    <category.icon
+                    <HugeiconsIcon
+                      icon={category.icon}
                       className='w-6 h-6 md:w-7 md:h-7 text-white'
                       aria-hidden='true'
                     />
@@ -478,7 +482,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
             </p>
           </motion.div>
 
-          <div className='max-w-4xl mx-auto'>
+          <div className=' mx-auto'>
             <div
               className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-8'
               role='list'
@@ -544,7 +548,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
             </p>
           </motion.div>
 
-          <div className='max-w-4xl mx-auto'>
+          <div className=' mx-auto'>
             <div
               className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'
               role='list'
@@ -567,7 +571,8 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
                       {...getAnimationProps({
                         transition: { duration: 0.6 },
                       })}>
-                      <section.icon
+                      <HugeiconsIcon
+                        icon={section.icon}
                         className='w-5 h-5 md:w-6 md:h-6 text-white'
                         aria-hidden='true'
                       />
@@ -601,7 +606,8 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
                         }
                         role='listitem'
                         tabIndex={0}>
-                        <CheckCircle
+                        <HugeiconsIcon
+                          icon={CheckmarkCircle01Icon}
                           className='w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0'
                           aria-hidden='true'
                         />
@@ -679,7 +685,7 @@ export function SkillsPage({ onPageChange }: SkillsPageProps) {
 
         <div className='container mx-auto px-4 sm:px-6 lg:px-12 relative z-10'>
           <motion.div
-            className='max-w-4xl mx-auto text-center'
+            className=' mx-auto text-center'
             {...getAnimationProps({
               initial: { opacity: 0, y: 30 },
               whileInView: { opacity: 1, y: 0 },

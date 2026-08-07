@@ -1,24 +1,25 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import {
+  CodeIcon,
+  Award04Icon,
+  UserGroup03Icon,
+  HealtcareIcon,
+  GlobalEditingIcon,
+  AnalyticsUpIcon,
+  BookOpen01Icon,
+  AiBrain05Icon,
+  Agreement01Icon,
+  AiGenerativeIcon,
+  GraduationScrollIcon,
+  Building05Icon,
+  Book02Icon,
+  CatIcon,
+  ApplePieIcon,
+  GameController03Icon,
+  TeacherIcon,
+} from '@hugeicons/core-free-icons'
 import { motion } from 'framer-motion'
 import { BackgroundElements } from './BackgroundElements'
-import {
-  Code2,
-  Award,
-  Users,
-  Heart,
-  Target,
-  TrendingUp,
-  BookOpen,
-  Zap,
-  Globe,
-  Star,
-  GraduationCap,
-  Building2,
-  Users2,
-  Book,
-  Cat,
-  Utensils,
-  GamepadIcon,
-} from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 
 interface AboutPageProps {
@@ -39,7 +40,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'Início da Graduação',
       description:
         'Entrei no Bacharelado em Ciência da Computação e comecei minha jornada na tecnologia.',
-      icon: GraduationCap,
+      icon: GraduationScrollIcon,
       color: 'from-purple-600 to-pink-600',
       side: 'left',
     },
@@ -48,7 +49,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'Viper Systems',
       description:
         'Minha primeira experiência na área de tecnologia, em uma startup voltada para saúde digital. Participei da criação do Tiabetz, um sistema que auxilia pessoas sem conhecimento técnico a calcular o nível de insulina no sangue, oferecendo mais autonomia e segurança no cuidado diário.',
-      icon: Building2,
+      icon: Building05Icon,
       color: 'from-pink-600 to-red-600',
       side: 'right',
     },
@@ -57,7 +58,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'Polícia Civil do Pará',
       description:
         'Estágio em desenvolvimento, atuando por 1 ano no desenvolvimento e modernização de sistemas. Atuei na criação do site oficial da Polícia Civil, implementação de sistemas internos, migração de projetos legados e melhorias da página de agendamento para emissão e renovação de RG.',
-      icon: Building2,
+      icon: Building05Icon,
       color: 'from-blue-600 to-cyan-600',
       side: 'left',
     },
@@ -66,7 +67,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'Manas Digitais',
       description:
         'Iniciei minha jornada no projeto como mentoranda, participando de programas de capacitação e desenvolvimento de habilidades técnicas. Após dois anos, retornei como mentora, contribuindo para a formação de mulheres na área de tecnologia, especialmente em contextos de vulnerabilidade social.',
-      icon: Users2,
+      icon: UserGroup03Icon,
       color: 'from-green-600 to-teal-600',
       side: 'right',
     },
@@ -75,7 +76,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'Compass.uol',
       description:
         'Atuei como desenvolvedora frontend Vue 3 em projetos de e-commerce B2B e B2C de grandes empresas. Desenvolvi bibliotecas de componentes escaláveis, PWAs e integrações complexas, aplicando testes do início ao fim e arquitetura baseada em micro frontends e microservices.',
-      icon: Building2,
+      icon: Building05Icon,
       color: 'from-yellow-600 to-orange-600',
       side: 'left',
     },
@@ -84,7 +85,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       title: 'MangaLab',
       description:
         'Mentora e desenvolvedora na MangaLab, um projeto social voltado para jovens, com foco em democratizar o acesso à tecnologia e incentivar a criatividade, programação e experiências de mercado para iniciantes.',
-      icon: Users2,
+      icon: UserGroup03Icon,
       color: 'from-red-600 to-pink-600',
       side: 'right',
     },
@@ -92,26 +93,26 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
 
   const valuesData = [
     {
-      icon: Heart,
+      icon: HealtcareIcon,
       title: 'Empatia',
       description:
         'Desenvolvimento centrado em pessoas reais, com suas histórias e necessidades.',
       gradient: 'from-purple-600 to-pink-600',
     },
     {
-      icon: Star,
+      icon: AiGenerativeIcon,
       title: 'Estética + Técnica',
       description: 'Código limpo, bonito e acessível.',
       gradient: 'from-pink-600 to-red-600',
     },
     {
-      icon: TrendingUp,
+      icon: AnalyticsUpIcon,
       title: 'Crescimento',
       description: 'Aprendizado contínuo e compartilhamento de conhecimento.',
       gradient: 'from-blue-600 to-cyan-600',
     },
     {
-      icon: Globe,
+      icon: Agreement01Icon,
       title: 'Impacto Social',
       description:
         'Usar tecnologia para gerar mudanças positivas na vida das pessoas.',
@@ -121,25 +122,25 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
 
   const interestsData = [
     {
-      icon: Cat,
+      icon: CatIcon,
       title: 'Pets',
       description: 'Meus companheiros de código',
       color: 'from-purple-600 to-pink-600',
     },
     {
-      icon: Book,
+      icon: Book02Icon,
       title: 'Literatura',
       description: 'Mundos e histórias que inspiram',
       color: 'from-blue-600 to-cyan-600',
     },
     {
-      icon: GamepadIcon,
+      icon: GameController03Icon,
       title: 'Jogos',
       description: 'Diversão, estratégia e criatividade',
       color: 'from-green-600 to-teal-600',
     },
     {
-      icon: Utensils,
+      icon: ApplePieIcon,
       title: 'Gastronomia',
       description: 'Explorar sabores e culturas',
       color: 'from-orange-600 to-red-600',
@@ -148,25 +149,25 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
 
   const motivationsData = [
     {
-      icon: BookOpen,
+      icon: BookOpen01Icon,
       title: 'Aprender',
       description: 'Sempre em busca de novas tecnologias e conhecimentos',
       gradient: 'from-purple-600 to-pink-600',
     },
     {
-      icon: Users,
+      icon: UserGroup03Icon,
       title: 'Conectar',
       description: 'Construir pontes entre pessoas através da tecnologia',
       gradient: 'from-blue-600 to-cyan-600',
     },
     {
-      icon: Zap,
+      icon: AiBrain05Icon,
       title: 'Criar',
       description: 'Transformar ideias em experiências digitais incríveis',
       gradient: 'from-green-600 to-teal-600',
     },
     {
-      icon: Target,
+      icon: GlobalEditingIcon,
       title: 'Transformar',
       description: 'Usar tecnologia para gerar impacto social positivo',
       gradient: 'from-orange-600 to-red-600',
@@ -204,12 +205,20 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
               <div className='flex flex-wrap gap-3 sm:gap-4'>
                 {[
                   {
-                    icon: Code2,
+                    icon: CodeIcon,
                     text: '50+ Projetos',
                     color: 'text-purple-400',
                   },
-                  { icon: Award, text: '5+ Anos', color: 'text-yellow-400' },
-                  { icon: Users, text: 'Mentoria', color: 'text-green-400' },
+                  {
+                    icon: Award04Icon,
+                    text: '5+ Anos',
+                    color: 'text-yellow-400',
+                  },
+                  {
+                    icon: TeacherIcon,
+                    text: 'Mentoria',
+                    color: 'text-green-400',
+                  },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -219,8 +228,10 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                     role='region'
                     aria-label={item.text}>
                     <div className='flex items-center space-x-2'>
-                      <item.icon
+                      <HugeiconsIcon
+                        icon={item.icon}
                         className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color}`}
+                        aria-hidden='true'
                       />
                       <span className='text-sm sm:text-base'>{item.text}</span>
                     </div>
@@ -362,7 +373,11 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                       <div className='flex items-start space-x-3 sm:space-x-4'>
                         <div
                           className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                          <item.icon className='w-5 h-5 sm:w-6 sm:h-6 text-white' />
+                          <HugeiconsIcon
+                            icon={item.icon}
+                            className='w-5 h-5 sm:w-6 sm:h-6 text-white'
+                            aria-hidden='true'
+                          />
                         </div>
                         <div className='flex-1 min-w-0'>
                           <span className='text-purple-300 font-semibold text-sm sm:text-base block mb-1'>
@@ -432,7 +447,11 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                   className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${value.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6`}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}>
-                  <value.icon className='w-6 h-6 sm:w-8 sm:h-8 text-white' />
+                  <HugeiconsIcon
+                    icon={value.icon}
+                    className='w-6 h-6 sm:w-8 sm:h-8 text-white'
+                    aria-hidden='true'
+                  />
                 </motion.div>
 
                 <h4 className='text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4'>
@@ -484,7 +503,11 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                   className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br ${interest.color} rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4`}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}>
-                  <interest.icon className='w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white' />
+                  <HugeiconsIcon
+                    icon={interest.icon}
+                    className='w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white'
+                    aria-hidden='true'
+                  />
                 </motion.div>
 
                 <h4 className='text-base sm:text-md lg:text-lg font-bold text-white mb-1 sm:mb-2'>
@@ -533,7 +556,11 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
                   className='w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6'
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}>
-                  <motivation.icon className='w-6 h-6 sm:w-8 sm:h-8 text-white' />
+                  <HugeiconsIcon
+                    icon={motivation.icon}
+                    className='w-6 h-6 sm:w-8 sm:h-8 text-white'
+                    aria-hidden='true'
+                  />
                 </motion.div>
 
                 <h4 className='text-xl sm:text-2xl font-bold mb-3 sm:mb-4'>

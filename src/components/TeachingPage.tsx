@@ -1,6 +1,16 @@
+import { HugeiconsIcon } from '@hugeicons/react'
+import {
+  UserGroupIcon,
+  AnalyticsUpIcon,
+  BookOpen01Icon,
+  CodeIcon,
+  Target01Icon,
+  UniversalAccessCircleIcon,
+  TeacherIcon,
+  GlobalEditingIcon,
+} from '@hugeicons/core-free-icons'
 import { motion, type MotionProps } from 'framer-motion'
 import { BackgroundElements } from './BackgroundElements'
-import { Users, TrendingUp, BookOpen, Code2, Target } from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { useEffect, useState, useMemo } from 'react'
 
@@ -19,9 +29,9 @@ export function TeachingPage() {
 
   const statsData = useMemo(
     () => [
-      { value: 'Inclusão', icon: Users },
-      { value: 'Educação', icon: BookOpen },
-      { value: 'Transformação', icon: TrendingUp },
+      { value: 'Inclusão', icon: UniversalAccessCircleIcon },
+      { value: 'Educação', icon: BookOpen01Icon },
+      { value: 'Transformação', icon: GlobalEditingIcon },
     ],
     [],
   )
@@ -29,7 +39,7 @@ export function TeachingPage() {
   const programsData = useMemo(
     () => [
       {
-        icon: Users,
+        icon: UserGroupIcon,
         title: 'Manas Digitais',
         description:
           'O projeto Manas Digitais é uma iniciativa de empoderamento feminino na área de Tecnologia da Informação, atuando em escolas públicas da região metropolitana de Belém, Pará. Através de oficinas de programação, rodas de conversa e mentorias, buscamos fomentar o interesse de meninas e mulheres pela tecnologia e promover a equidade de gênero nesse setor.',
@@ -48,7 +58,7 @@ export function TeachingPage() {
         gradient: 'from-purple-600 to-pink-600',
       },
       {
-        icon: Code2,
+        icon: CodeIcon,
         title: 'MangaLab',
         description:
           'Nosso laboratório educacional tem como missão democratizar o ensino de programação e oferecer experiências práticas de mercado para iniciantes. Cada projeto é uma oportunidade de aprendizado guiado por desenvolvedores seniores, garantindo qualidade e desenvolvimento de habilidades reais.',
@@ -73,28 +83,28 @@ export function TeachingPage() {
   const methodologyData = useMemo(
     () => [
       {
-        icon: Target,
+        icon: Target01Icon,
         title: 'Foco Prático',
         description:
           'Aprendizado baseado em projetos reais do mercado, não apenas teoria.',
         gradient: 'from-blue-600 to-cyan-600',
       },
       {
-        icon: Users,
+        icon: TeacherIcon,
         title: 'Mentoria 1:1',
         description:
           'Acompanhamento personalizado adaptado ao ritmo e objetivos de cada aluno.',
         gradient: 'from-purple-600 to-pink-600',
       },
       {
-        icon: Code2,
+        icon: CodeIcon,
         title: 'Code Reviews',
         description:
           'Revisão detalhada de código com feedback construtivo e boas práticas.',
         gradient: 'from-orange-600 to-red-600',
       },
       {
-        icon: TrendingUp,
+        icon: AnalyticsUpIcon,
         title: 'Evolução Contínua',
         description:
           'Acompanhamento de progresso com metas claras e desafios crescentes.',
@@ -154,7 +164,8 @@ export function TeachingPage() {
                     whileHover={!isReducedMotion ? { scale: 1.05 } : {}}
                     role='listitem'
                     tabIndex={0}>
-                    <stat.icon
+                    <HugeiconsIcon
+                      icon={stat.icon}
                       className='w-5 h-5 md:w-6 md:h-6 text-gradient-gold mx-auto mb-2'
                       aria-hidden='true'
                     />
@@ -310,7 +321,11 @@ export function TeachingPage() {
                       transition: { duration: 0.6 },
                     })}
                     aria-hidden='true'>
-                    <program.icon className='w-8 h-8 md:w-10 md:h-10 text-white' />
+                    <HugeiconsIcon
+                      icon={program.icon}
+                      className='w-8 h-8 md:w-10 md:h-10 text-white'
+                      aria-hidden='true'
+                    />
                   </motion.div>
 
                   <h3 className='text-xl md:text-2xl font-bold text-white mb-3 text-center'>
@@ -417,7 +432,11 @@ export function TeachingPage() {
                     transition: { duration: 0.6 },
                   })}
                   aria-hidden='true'>
-                  <item.icon className='w-6 h-6 md:w-8 md:h-8 text-white' />
+                  <HugeiconsIcon
+                    icon={item.icon}
+                    className='w-6 h-6 md:w-8 md:h-8 text-white'
+                    aria-hidden='true'
+                  />
                 </motion.div>
 
                 <h3 className='text-xl md:text-2xl font-bold text-white mb-2 md:mb-3'>
